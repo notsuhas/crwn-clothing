@@ -15,7 +15,15 @@
 		height: 240px;
 		display: flex;
 		flex-direction: column;
-		overflow: scroll;
+		overflow-x: hidden;
+		overflow-y: scroll;
+
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE 10+ */
+		&::-webkit-scrollbar {
+			width: 0px;
+			background: transparent; /* Chrome/Safari/Webkit */
+		}
 	}
 
 	button {
